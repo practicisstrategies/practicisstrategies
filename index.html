@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Practicis Strategies — Helping Startups Start Up</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<!-- ═══════════════ NAVIGATION ═══════════════ -->
+<nav id="navbar">
+  <div class="nav-container">
+    <a href="#" class="logo">Practicis<span>.</span></a>
+    <button class="mobile-toggle" aria-label="Toggle menu" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact" class="nav-cta">Book a Call</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<header id="hero">
+  <div class="hero-bg-shapes">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+  </div>
+  <div class="container hero-content">
+    <p class="hero-eyebrow">Operations Management Consulting</p>
+    <h1>Helping startups<br /><span class="gradient-text">start up.</span></h1>
+    <p class="hero-sub">We build the operational backbone your startup needs — from brand foundations and websites to streamlined workflows — so you can focus on growth.</p>
+    <div class="hero-buttons">
+      <a href="#services" class="btn btn-primary">Explore Packages</a>
+      <a href="#contact" class="btn btn-outline">Get in Touch</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-number" data-target="50">0</span><span class="stat-suffix">+</span>
+        <span class="stat-label">Startups Launched</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number" data-target="98">0</span><span class="stat-suffix">%</span>
+        <span class="stat-label">Client Satisfaction</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number" data-target="4">0</span><span class="stat-suffix"></span>
+        <span class="stat-label">Core Packages</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════ ABOUT ═══════════════ -->
+<section id="about">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">Who We Are</p>
+      <h2>Operations expertise,<br /><span class="gradient-text">startup speed.</span></h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>Practicis Strategies is an operations management consulting agency built for founders who are ready to move fast — but smart. We know that early-stage companies need more than just a great idea; they need systems, structure, and a professional presence from day one.</p>
+        <p>We handle the operational heavy lifting so you can stay focused on what matters most: building your product, serving your customers, and scaling your vision.</p>
+        <div class="about-highlights">
+          <div class="highlight">
+            <div class="highlight-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <div>
+              <strong>Startup-First Approach</strong>
+              <p>Every service is designed for the pace and budget of early-stage companies.</p>
+            </div>
+          </div>
+          <div class="highlight">
+            <div class="highlight-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+            </div>
+            <div>
+              <strong>End-to-End Delivery</strong>
+              <p>From brand identity to digital infrastructure — we cover the full operational stack.</p>
+            </div>
+          </div>
+          <div class="highlight">
+            <div class="highlight-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div>
+              <strong>Hands-On Partnership</strong>
+              <p>We don't just advise — we build alongside you, delivering real assets you can use immediately.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-image">
+        <div class="about-image-placeholder">
+          <svg width="64" height="64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"><rect x="4" y="4" width="56" height="56" rx="8"/><circle cx="22" cy="24" r="6"/><path d="M60 44 L44 28 L16 56"/></svg>
+          <span>Your Photo Here</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ SERVICES ═══════════════ -->
+<section id="services">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">What We Offer</p>
+      <h2>Packages built for<br /><span class="gradient-text">where you are.</span></h2>
+      <p class="section-sub">Whether you're just getting started or looking to optimize what you already have, we've got a package for you.</p>
+    </div>
+
+    <div class="packages-grid">
+      <!-- Package 1 — Consultation -->
+      <div class="package-card">
+        <div class="package-badge">Flexible</div>
+        <h3>Consultation</h3>
+        <p class="package-desc">One-on-one strategic guidance for your operational challenges. Bring your questions — we'll bring the answers.</p>
+        <div class="package-price">
+          <span class="price">$150</span>
+          <span class="price-unit">/hour</span>
+        </div>
+        <ul class="package-features">
+          <li>
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            1-on-1 strategy session
+          </li>
+          <li>
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Operational problem-solving
+          </li>
+          <li>
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Actionable next steps
+          </li>
+          <li>
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Follow-up summary email
+          </li>
+        </ul>
+        <a href="#contact" class="btn btn-outline btn-block">Book a Session</a>
+      </div>
+
+      <!-- Package 2 — Startup Foundations (featured) -->
+      <div class="package-card featured">
+        <div class="package-badge">Most Popular</div>
+        <h3>Startup Foundations</h3>
+        <p class="package-desc">Everything you need to launch with a professional, organized presence — all in one package.</p>
+        <div class="package-price">
+          <span class="price">$999</span>
+          <span class="price-unit">flat rate</span>
+        </div>
+        <ul class="package-features">
+          <li>
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Discovery call
+          </li>
+          <li>
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Static website design &amp; build
+          </li>
+          <li>
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Workspace &amp; drives organization
+          </li>
+          <li>
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Professional email setup
+          </li>
+          <li>
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Social media registration
+          </li>
+          <li>
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Startup brand kit
+          </li>
+        </ul>
+        <a href="#contact" class="btn btn-primary btn-block">Get Started</a>
+      </div>
+
+      <!-- Package 3 — Website & SEO Audit -->
+      <div class="package-card">
+        <div class="package-badge">Growth</div>
+        <h3>Website &amp; SEO Audit</h3>
+        <p class="package-desc">A comprehensive review of your website's performance, user experience, and search engine visibility.</p>
+        <div class="package-price">
+          <span class="price">$599</span>
+          <span class="price-unit">flat rate</span>
+        </div>
+        <ul class="package-features">
+          <li>
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Full site performance analysis
+          </li>
+          <li>
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            SEO health check &amp; keyword gaps
+          </li>
+          <li>
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            UX &amp; conversion recommendations
+          </li>
+          <li>
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Detailed report with action items
+          </li>
+        </ul>
+        <a href="#contact" class="btn btn-outline btn-block">Request an Audit</a>
+      </div>
+
+      <!-- Package 4 — Marketing & Socials Audit -->
+      <div class="package-card">
+        <div class="package-badge">Optimize</div>
+        <h3>Marketing &amp; Socials Audit</h3>
+        <p class="package-desc">A deep dive into your social media and marketing channels to find what's working — and what's not.</p>
+        <div class="package-price">
+          <span class="price">$399</span>
+          <span class="price-unit">flat rate</span>
+        </div>
+        <ul class="package-features">
+          <li>
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Social channel performance review
+          </li>
+          <li>
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Content &amp; engagement analysis
+          </li>
+          <li>
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Competitor benchmarking
+          </li>
+          <li>
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Strategy roadmap &amp; quick wins
+          </li>
+        </ul>
+        <a href="#contact" class="btn btn-outline btn-block">Request an Audit</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ PROCESS ═══════════════ -->
+<section id="process">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">How It Works</p>
+      <h2>Simple process,<br /><span class="gradient-text">serious results.</span></h2>
+    </div>
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="step-number">01</div>
+        <h3>Discovery</h3>
+        <p>We hop on a call to understand your business, goals, and current operational state. No templates — just real conversation.</p>
+      </div>
+      <div class="process-connector"></div>
+      <div class="process-step">
+        <div class="step-number">02</div>
+        <h3>Strategy</h3>
+        <p>We map out a tailored plan covering exactly what needs to be built, organized, or optimized for your startup.</p>
+      </div>
+      <div class="process-connector"></div>
+      <div class="process-step">
+        <div class="step-number">03</div>
+        <h3>Execution</h3>
+        <p>We get to work — building your website, setting up your tools, organizing your workspace, and creating your brand assets.</p>
+      </div>
+      <div class="process-connector"></div>
+      <div class="process-step">
+        <div class="step-number">04</div>
+        <h3>Handoff</h3>
+        <p>You receive everything ready to go, with a walkthrough so you know exactly how to use and maintain what we've built.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ TESTIMONIALS ═══════════════ -->
+<section id="testimonials">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">What Clients Say</p>
+      <h2>Trusted by founders<br /><span class="gradient-text">who ship.</span></h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p>"Practicis took us from a messy Google Drive and no online presence to a fully organized, professional startup in under two weeks. Absolutely worth every dollar."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">JR</div>
+          <div>
+            <strong>Jordan R.</strong>
+            <span>Founder, NovaTech</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p>"The SEO audit alone paid for itself. We saw a 40% traffic increase within a month of implementing their recommendations. Clear, actionable, no fluff."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">SM</div>
+          <div>
+            <strong>Samira M.</strong>
+            <span>CEO, GreenLeaf Co.</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p>"Chantale genuinely understands operations. The consultation session gave us a clear roadmap that we're still following six months later. Highly recommend."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">DK</div>
+          <div>
+            <strong>David K.</strong>
+            <span>Co-Founder, UrbanPulse</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FAQ ═══════════════ -->
+<section id="faq">
+  <div class="container container-narrow">
+    <div class="section-header">
+      <p class="section-eyebrow">Questions</p>
+      <h2>Frequently asked<br /><span class="gradient-text">questions.</span></h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          How long does the Startup Foundations package take?
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          <p>Most Startup Foundations projects are completed within 2–3 weeks, depending on the complexity of your needs and how quickly we receive your input during the discovery phase.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Do I need to prepare anything before our consultation?
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          <p>Just bring your questions and a general idea of where you're stuck. We'll guide the conversation from there. If you have existing assets (logo, brand colors, domain, etc.), have those handy too.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What kind of website do I get with the Startup Foundations package?
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          <p>You'll receive a professionally designed, mobile-responsive static website. It typically includes a homepage, about section, services, and contact information — perfect for establishing your online presence as you grow.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Can I bundle multiple packages together?
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          <p>Absolutely! Many clients start with the Startup Foundations package and add an audit later as they grow. We're happy to discuss custom bundles — just reach out and we'll put together a tailored proposal.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What's included in the brand kit?
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          <p>The startup brand kit includes a logo concept, color palette, font selections, and basic brand guidelines — everything you need to maintain a consistent, professional look across all your channels.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ CONTACT / CTA ═══════════════ -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-wrapper">
+      <div class="contact-info">
+        <p class="section-eyebrow">Let's Talk</p>
+        <h2>Ready to get<br /><span class="gradient-text">organized?</span></h2>
+        <p>Whether you're launching something new or leveling up what you already have, we'd love to hear from you.</p>
+        <div class="contact-details">
+          <div class="contact-item">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:cstreeting@practicisstrategies.com">cstreeting@practicisstrategies.com</a>
+          </div>
+        </div>
+        <div class="social-links">
+          <a href="#" aria-label="LinkedIn" class="social-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram" class="social-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+          </a>
+          <a href="#" aria-label="Twitter / X" class="social-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+        </div>
+      </div>
+      <form class="contact-form" onsubmit="handleSubmit(event)">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your full name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@company.com" required />
+        </div>
+        <div class="form-group">
+          <label for="service">Interested In</label>
+          <select id="service" name="service">
+            <option value="">Select a package...</option>
+            <option value="consultation">Consultation ($150/hr)</option>
+            <option value="startup-foundations">Startup Foundations ($999)</option>
+            <option value="seo-audit">Website &amp; SEO Audit ($599)</option>
+            <option value="marketing-audit">Marketing &amp; Socials Audit ($399)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Tell us a bit about your project..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <a href="#" class="logo">Practicis<span>.</span></a>
+        <p>Helping startups start up.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Practicis Strategies. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
