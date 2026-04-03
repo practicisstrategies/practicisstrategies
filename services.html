@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services & Pricing — Practicis Strategies</title>
+<link rel="icon" type="image/x-icon" href="img/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="practicis.css">
+<style>
+  /* ── PACKAGES ─────────────────────────────────────────── */
+  .packages-section { padding: 80px 64px 100px; background: var(--white); }
+  .packages-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 56px; }
+  .pkg-card {
+    background: var(--off-white); border: 1px solid var(--border);
+    border-radius: 10px; padding: 40px 36px 44px;
+    display: flex; flex-direction: column; transition: transform .2s, box-shadow .2s;
+  }
+  .pkg-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(29,29,29,0.1); }
+  .pkg-card.featured { background: var(--black); border-color: var(--black); }
+  .pkg-card.featured .pkg-name, .pkg-card.featured .pkg-desc { color: var(--white); }
+  .pkg-card.featured .pkg-price { color: var(--white); }
+  .pkg-card.featured .pkg-feature { color: rgba(255,255,255,0.55); }
+  .pkg-card.featured .pkg-feature::before { background: var(--bordeaux); }
+  .pkg-card.featured .pkg-divider { border-color: rgba(255,255,255,0.1); }
+  .pkg-card.featured .btn-pkg { background: var(--bordeaux); color: var(--white); border-color: var(--bordeaux); }
+  .pkg-card.featured .btn-pkg:hover { background: var(--bordeaux-dk); }
+  .pkg-card.featured .pkg-badge { color: rgba(255,255,255,0.35); }
+  .pkg-badge { font-size: 10px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--bordeaux); margin-bottom: 16px; display: block; }
+  .pkg-name { font-family: 'Syne', sans-serif; font-size: 26px; font-weight: 700; color: var(--black); letter-spacing: -0.5px; line-height: 1.1; margin-bottom: 10px; }
+  .pkg-price { font-family: 'Inter', sans-serif; font-size: 42px; font-weight: 800; color: var(--bordeaux); letter-spacing: -2px; line-height: 1; }
+  .pkg-price sub { font-size: 15px; font-weight: 400; letter-spacing: 0; vertical-align: baseline; color: var(--muted); }
+  .pkg-divider { border: none; border-top: 1px solid var(--border); margin: 24px 0; }
+  .pkg-desc { font-size: 14px; color: var(--muted); line-height: 1.75; font-weight: 300; margin-bottom: 20px; }
+  .pkg-features { list-style: none; display: flex; flex-direction: column; gap: 10px; flex: 1; margin-bottom: 32px; }
+  .pkg-feature { font-size: 13px; color: var(--muted); line-height: 1.5; display: flex; align-items: flex-start; gap: 12px; font-weight: 300; }
+  .pkg-feature::before { content: ''; display: inline-block; width: 5px; height: 5px; background: var(--bordeaux); border-radius: 50%; flex-shrink: 0; margin-top: 6px; }
+  .btn-pkg { display: block; text-align: center; font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 600; padding: 16px 28px; border-radius: 100px; border: 1.5px solid var(--black); color: var(--black); transition: background .2s, color .2s; }
+  .btn-pkg:hover { background: var(--black); color: var(--white); }
+
+  /* ── PROCESS ──────────────────────────────────────────── */
+  .process { padding: 100px 64px; background: var(--off-white); }
+  .process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; margin-top: 56px; }
+  .process-step { position: relative; }
+  .step-num { font-family: 'Inter', sans-serif; font-size: 48px; font-weight: 800; color: var(--border); line-height: 1; margin-bottom: 20px; }
+  .process-step h4 { font-family: 'Syne', sans-serif; font-size: 17px; font-weight: 700; color: var(--black); margin-bottom: 10px; letter-spacing: -0.3px; }
+  .process-step p { font-size: 13px; color: var(--muted); line-height: 1.7; font-weight: 300; }
+  .process-step::after { content: '→'; position: absolute; top: 12px; right: -20px; font-size: 20px; color: var(--border); }
+  .process-step:last-child::after { display: none; }
+
+  /* ── FAQ ──────────────────────────────────────────────── */
+  .faq { padding: 100px 64px; background: var(--white); }
+  .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 56px; }
+  .faq-item { padding: 32px; border: 1px solid var(--border); border-radius: 8px; transition: border-color .2s; }
+  .faq-item:hover { border-color: var(--bordeaux); }
+  .faq-item h4 { font-family: 'Syne', sans-serif; font-size: 16px; font-weight: 700; color: var(--black); margin-bottom: 12px; letter-spacing: -0.2px; }
+  .faq-item p { font-size: 13px; color: var(--muted); line-height: 1.75; font-weight: 300; }
+
+  /* ── RESPONSIVE ───────────────────────────────────────── */
+  @media (max-width: 1024px) {
+    .packages-section { padding: 56px 32px 72px; }
+    .process { padding: 72px 32px; }
+    .process-steps { grid-template-columns: repeat(2, 1fr); }
+    .process-step::after { display: none; }
+    .faq { padding: 72px 32px; }
+    .faq-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 640px) {
+    .packages-section { padding: 40px 20px 56px; }
+    .packages-grid { grid-template-columns: 1fr; }
+    .process { padding: 56px 20px; }
+    .process-steps { grid-template-columns: 1fr; gap: 28px; }
+    .faq { padding: 56px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a class="nav-logo" href="index.html">
+    <img src="img/apple-touch-icon.png" alt="Practicis Strategies">
+    <span class="nav-logo-text">Practicis Strategies</span>
+  </a>
+  <div class="nav-links">
+    <a href="about.html">About</a>
+    <a href="services.html" class="active">Services</a>
+    <a href="work.html">Work</a>
+    <a href="contact.html" class="nav-cta">Let's talk</a>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-drawer" id="nav-drawer">
+  <a href="about.html">About</a>
+  <a href="services.html">Services</a>
+  <a href="work.html">Work</a>
+  <a href="contact.html" class="nav-cta">Let's talk</a>
+</div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-eyebrow">Services & Pricing</div>
+  <h1>The right engagement,<br>at every stage.</h1>
+  <p class="page-hero-sub">From a single advisory session to a complete launch program — each package is built to deliver tangible results.</p>
+</div>
+
+<!-- PACKAGES -->
+<section class="packages-section">
+  <div class="section-eyebrow">Our Packages</div>
+  <h2 class="section-title">Four ways to work with us.</h2>
+  <div class="packages-grid">
+
+    <div class="pkg-card">
+      <span class="pkg-badge">01 — Flexible</span>
+      <div class="pkg-name">Consultation</div>
+      <div class="pkg-price">$150 <sub>/hour</sub></div>
+      <hr class="pkg-divider">
+      <p class="pkg-desc">On-demand strategic guidance tailored to your specific challenges — no long-term commitment required. Book as many or as few sessions as you need.</p>
+      <ul class="pkg-features">
+        <li class="pkg-feature">One-on-one strategic session (60 min)</li>
+        <li class="pkg-feature">Personalized action plan</li>
+        <li class="pkg-feature">Business & operations review</li>
+        <li class="pkg-feature">Growth opportunity assessment</li>
+        <li class="pkg-feature">Follow-up written summary & next steps</li>
+      </ul>
+      <a href="contact.html" class="btn-pkg">Book a session →</a>
+    </div>
+
+    <div class="pkg-card featured">
+      <span class="pkg-badge">02 — Most Popular</span>
+      <div class="pkg-name">Startup Foundations</div>
+      <div class="pkg-price">$999 <sub>flat</sub></div>
+      <hr class="pkg-divider">
+      <p class="pkg-desc">Everything a new business needs to launch professionally — in one comprehensive, done-for-you package. Go from idea to operational in weeks.</p>
+      <ul class="pkg-features">
+        <li class="pkg-feature">Discovery call & strategy session</li>
+        <li class="pkg-feature">Static website (up to 5 pages)</li>
+        <li class="pkg-feature">Google Drive workspace setup & organization</li>
+        <li class="pkg-feature">Professional email configuration (Google Workspace)</li>
+        <li class="pkg-feature">Social media account registration (3 platforms)</li>
+        <li class="pkg-feature">Startup brand kit (logo, colors, fonts, templates)</li>
+      </ul>
+      <a href="contact.html" class="btn-pkg">Get started →</a>
+    </div>
+
+    <div class="pkg-card">
+      <span class="pkg-badge">03 — Audit</span>
+      <div class="pkg-name">Website & SEO Audit</div>
+      <div class="pkg-price">$599 <sub>flat</sub></div>
+      <hr class="pkg-divider">
+      <p class="pkg-desc">A deep-dive into your website's performance and search visibility. Know exactly what's holding you back and how to fix it — with a clear, prioritized report.</p>
+      <ul class="pkg-features">
+        <li class="pkg-feature">Technical SEO analysis</li>
+        <li class="pkg-feature">On-page optimization review</li>
+        <li class="pkg-feature">Site speed & mobile UX assessment</li>
+        <li class="pkg-feature">Keyword gap & competitor analysis</li>
+        <li class="pkg-feature">Backlink profile review</li>
+        <li class="pkg-feature">Prioritized action recommendations report</li>
+      </ul>
+      <a href="contact.html" class="btn-pkg">Request an audit →</a>
+    </div>
+
+    <div class="pkg-card">
+      <span class="pkg-badge">04 — Audit</span>
+      <div class="pkg-name">Marketing & Socials Audit</div>
+      <div class="pkg-price">$399 <sub>flat</sub></div>
+      <hr class="pkg-divider">
+      <p class="pkg-desc">A comprehensive review of your social media presence and marketing strategy — find what's working, what's not, and where the opportunity lies.</p>
+      <ul class="pkg-features">
+        <li class="pkg-feature">Social media profile audit (up to 4 platforms)</li>
+        <li class="pkg-feature">Content strategy & calendar review</li>
+        <li class="pkg-feature">Audience & engagement analysis</li>
+        <li class="pkg-feature">Brand voice consistency check</li>
+        <li class="pkg-feature">Competitor benchmarking</li>
+        <li class="pkg-feature">Platform-specific growth roadmap</li>
+      </ul>
+      <a href="contact.html" class="btn-pkg">Request an audit →</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process">
+  <div class="section-eyebrow">How It Works</div>
+  <h2 class="section-title">Simple, transparent, effective.</h2>
+  <div class="process-steps">
+    <div class="process-step">
+      <div class="step-num">01</div>
+      <h4>Discovery Call</h4>
+      <p>We start with a free conversation to understand your goals, your challenges, and what success looks like for you.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">02</div>
+      <h4>Proposal & Scope</h4>
+      <p>We present a tailored plan with clear deliverables, timelines, and pricing — no hidden fees, no surprises.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">03</div>
+      <h4>Execution</h4>
+      <p>We get to work. You're kept in the loop at every milestone with clear, consistent communication throughout.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">04</div>
+      <h4>Delivery & Follow-up</h4>
+      <p>We hand off your deliverables with full documentation, plus a post-engagement check-in to ensure lasting results.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="section-eyebrow">FAQ</div>
+  <h2 class="section-title">Common questions.</h2>
+  <div class="faq-grid">
+    <div class="faq-item">
+      <h4>Do I need to commit to a package upfront?</h4>
+      <p>Not at all. Our hourly Consultation option lets you start with a single session. If you're considering a package, we always begin with a free discovery call so you can make an informed decision.</p>
+    </div>
+    <div class="faq-item">
+      <h4>How long does the Startup Foundations package take?</h4>
+      <p>Typically 3–5 weeks from kickoff to delivery, depending on feedback cycles. We work efficiently and keep timelines tight so you can launch with momentum.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Can I bundle multiple packages?</h4>
+      <p>Yes — we offer bundled pricing for clients who book multiple services at once. Reach out and we'll put together a custom proposal tailored to your needs.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Do you work with clients outside of Montréal?</h4>
+      <p>Absolutely. We work with clients across Canada and internationally. All engagements can be conducted fully remotely, or in-person when logistics allow.</p>
+    </div>
+    <div class="faq-item">
+      <h4>What happens after the audit deliverable?</h4>
+      <p>You'll receive a full written report with prioritized recommendations. We also offer optional implementation support — whether that's a follow-up consultation or a separate engagement to execute the roadmap.</p>
+    </div>
+    <div class="faq-item">
+      <h4>What industries do you work with?</h4>
+      <p>We've served 12+ industries including tech, non-profit, government, real estate, professional services, and hospitality. Our methodology is sector-agnostic — we adapt to your context.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<div class="cta-band">
+  <div>
+    <h2>Not sure which package is right for you?</h2>
+    <p>Book a free 30-minute call and we'll figure it out together.</p>
+  </div>
+  <a href="contact.html" class="btn-outline-light">Book a free call →</a>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="index.html" class="footer-logo-link">
+        <img src="img/apple-touch-icon.png" alt="Practicis Strategies">
+        <span class="footer-logo-text">Practicis Strategies</span>
+      </a>
+      <p class="footer-tagline">Strategic consulting for organizations that demand clarity and results.</p>
+      <div class="footer-socials"><a href="#">LinkedIn</a><a href="#">Instagram</a></div>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-col">
+        <strong>Navigate</strong>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services & Pricing</a>
+        <a href="work.html">Our Work</a>
+        <a href="about.html">About Us</a>
+      </div>
+      <div class="footer-col">
+        <strong>Company</strong>
+        <a href="about.html#team">Meet Our Team</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <div class="footer-col">
+        <strong>Legal</strong>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2025 Practicis Strategies Inc. — Montréal, QC</span>
+    <div class="footer-legal"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></div>
+  </div>
+</footer>
+
+<script>
+  const btn = document.getElementById('hamburger');
+  const drawer = document.getElementById('nav-drawer');
+  btn.addEventListener('click', () => { btn.classList.toggle('open'); drawer.classList.toggle('open'); document.body.style.overflow = drawer.classList.contains('open') ? 'hidden' : ''; });
+  drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { btn.classList.remove('open'); drawer.classList.remove('open'); document.body.style.overflow = ''; }));
+</script>
+</body>
+</html>

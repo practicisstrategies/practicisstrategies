@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Practicis Strategies</title>
+<link rel="icon" type="image/x-icon" href="img/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="practicis.css">
+<style>
+  /* ── CONTACT SECTION ──────────────────────────────────── */
+  .contact-section { padding: 80px 64px 100px; background: var(--white); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 80px; align-items: start; }
+
+  /* Left column */
+  .contact-info h2 { font-family: 'Syne', sans-serif; font-size: clamp(28px, 4vw, 44px); font-weight: 700; color: var(--black); letter-spacing: -1.5px; line-height: 1.1; margin-bottom: 20px; }
+  .contact-info h2 .accent { color: var(--bordeaux); }
+  .contact-info > p { font-size: 14px; color: var(--muted); line-height: 1.8; font-weight: 300; max-width: 360px; margin-bottom: 40px; }
+  .contact-items { display: flex; flex-direction: column; gap: 24px; margin-bottom: 36px; }
+  .contact-item { display: flex; align-items: flex-start; gap: 16px; }
+  .contact-item-icon { width: 40px; height: 40px; background: var(--light); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
+  .contact-item-text strong { display: block; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 3px; }
+  .contact-item-text span, .contact-item-text a { font-size: 14px; color: var(--black); font-weight: 400; text-decoration: none; }
+  .contact-item-text a:hover { color: var(--bordeaux); }
+  .contact-socials { display: flex; gap: 16px; }
+  .contact-socials a { font-size: 12px; font-weight: 500; color: var(--bordeaux); letter-spacing: 0.04em; padding: 8px 16px; border: 1px solid var(--bordeaux); border-radius: 100px; transition: background .2s, color .2s; }
+  .contact-socials a:hover { background: var(--bordeaux); color: var(--white); }
+
+  /* Form */
+  .contact-form-wrap { background: var(--off-white); border-radius: 12px; padding: 44px 40px; }
+  .contact-form { display: flex; flex-direction: column; gap: 16px; }
+  .contact-form .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .btn-submit {
+    background: var(--bordeaux); color: white; border: none;
+    padding: 16px; border-radius: 8px;
+    font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 600;
+    cursor: pointer; transition: background .2s; width: 100%;
+  }
+  .btn-submit:hover { background: var(--bordeaux-dk); }
+  .form-note { font-size: 12px; color: var(--muted); text-align: center; margin-top: 4px; font-weight: 300; }
+  /* Success state */
+  .form-success { display: none; text-align: center; padding: 48px 24px; }
+  .form-success.show { display: block; }
+  .success-check { width: 56px; height: 56px; background: var(--bordeaux); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 22px; color: white; }
+  .form-success h3 { font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 700; color: var(--black); margin-bottom: 10px; }
+  .form-success p { font-size: 14px; color: var(--muted); line-height: 1.7; font-weight: 300; }
+
+  /* ── RESPONSIVE ───────────────────────────────────────── */
+  @media (max-width: 1024px) {
+    .contact-section { padding: 56px 32px 72px; }
+    .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+    .contact-form-wrap { padding: 36px 32px; }
+  }
+  @media (max-width: 640px) {
+    .contact-section { padding: 40px 20px 56px; }
+    .contact-form-wrap { padding: 28px 20px; }
+    .contact-form .form-row { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a class="nav-logo" href="index.html">
+    <img src="img/apple-touch-icon.png" alt="Practicis Strategies">
+    <span class="nav-logo-text">Practicis Strategies</span>
+  </a>
+  <div class="nav-links">
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="work.html">Work</a>
+    <a href="contact.html" class="nav-cta active">Let's talk</a>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-drawer" id="nav-drawer">
+  <a href="about.html">About</a>
+  <a href="services.html">Services</a>
+  <a href="work.html">Work</a>
+  <a href="contact.html" class="nav-cta">Let's talk</a>
+</div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-eyebrow">Contact</div>
+  <h1>Let's start a<br><span class="accent">conversation.</span></h1>
+  <p class="page-hero-sub">Tell us about your project. We'll get back to you within 24 hours.</p>
+</div>
+
+<!-- CONTACT SECTION -->
+<section class="contact-section">
+  <div class="contact-grid">
+
+    <div class="contact-info">
+      <h2>We'd love to hear<br>what you're <span class="accent">building.</span></h2>
+      <p>Whether you're navigating a strategic inflection point, launching a new venture, or looking to align your team around a shared vision — we're ready to help.</p>
+      <div class="contact-items">
+        <div class="contact-item">
+          <div class="contact-item-icon">✉</div>
+          <div class="contact-item-text">
+            <strong>Email</strong>
+            <a href="mailto:hello@practicis.ca">hello@practicis.ca</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">📍</div>
+          <div class="contact-item-text">
+            <strong>Location</strong>
+            <span>Montréal, QC — Remote Worldwide</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">⏱</div>
+          <div class="contact-item-text">
+            <strong>Response Time</strong>
+            <span>Within 24 hours on business days</span>
+          </div>
+        </div>
+      </div>
+      <div class="contact-socials">
+        <a href="#">LinkedIn</a>
+        <a href="#">Instagram</a>
+      </div>
+    </div>
+
+    <div class="contact-form-wrap">
+      <!-- ✦ Formspree: replace YOUR_FORM_ID with your actual ID from formspree.io -->
+      <form class="contact-form" id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="first_name" placeholder="Jane" required>
+          </div>
+          <div class="form-group">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="last_name" placeholder="Doe" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="jane@company.com" required>
+        </div>
+        <div class="form-group">
+          <label for="company">Company / Organization</label>
+          <input type="text" id="company" name="company" placeholder="Your company name">
+        </div>
+        <div class="form-group">
+          <label for="service">Service of Interest</label>
+          <select id="service" name="service">
+            <option value="">— Select a package —</option>
+            <option value="consultation">Consultation ($150/hr)</option>
+            <option value="startup">Startup Foundations ($999)</option>
+            <option value="seo">Website & SEO Audit ($599)</option>
+            <option value="marketing">Marketing & Socials Audit ($399)</option>
+            <option value="other">Other / Not sure yet</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Tell us about your project</label>
+          <textarea id="message" name="message" rows="5" placeholder="What are you trying to accomplish? What's the context? Any timeline or constraints we should know about?"></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Send message →</button>
+        <p class="form-note">We typically respond within 24 hours on business days.</p>
+      </form>
+      <div class="form-success" id="form-success">
+        <div class="success-check">✓</div>
+        <h3>Message received!</h3>
+        <p>Thank you for reaching out. We'll be back in touch within 24 hours.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="index.html" class="footer-logo-link">
+        <img src="img/apple-touch-icon.png" alt="Practicis Strategies">
+        <span class="footer-logo-text">Practicis Strategies</span>
+      </a>
+      <p class="footer-tagline">Strategic consulting for organizations that demand clarity and results.</p>
+      <div class="footer-socials"><a href="#">LinkedIn</a><a href="#">Instagram</a></div>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-col">
+        <strong>Navigate</strong>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services & Pricing</a>
+        <a href="work.html">Our Work</a>
+        <a href="about.html">About Us</a>
+      </div>
+      <div class="footer-col">
+        <strong>Company</strong>
+        <a href="about.html#team">Meet Our Team</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <div class="footer-col">
+        <strong>Legal</strong>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2025 Practicis Strategies Inc. — Montréal, QC</span>
+    <div class="footer-legal"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></div>
+  </div>
+</footer>
+
+<script>
+  const btn = document.getElementById('hamburger');
+  const drawer = document.getElementById('nav-drawer');
+  btn.addEventListener('click', () => { btn.classList.toggle('open'); drawer.classList.toggle('open'); document.body.style.overflow = drawer.classList.contains('open') ? 'hidden' : ''; });
+  drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { btn.classList.remove('open'); drawer.classList.remove('open'); document.body.style.overflow = ''; }));
+
+  // Form success state
+  const form = document.getElementById('contact-form');
+  const success = document.getElementById('form-success');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    const action = form.action;
+    // If Formspree ID not yet set, show success anyway (demo mode)
+    if (action.includes('YOUR_FORM_ID')) {
+      form.style.display = 'none';
+      success.classList.add('show');
+      return;
+    }
+    try {
+      const res = await fetch(action, { method: 'POST', body: data, headers: { Accept: 'application/json' } });
+      if (res.ok) { form.style.display = 'none'; success.classList.add('show'); }
+    } catch { form.style.display = 'none'; success.classList.add('show'); }
+  });
+</script>
+</body>
+</html>
