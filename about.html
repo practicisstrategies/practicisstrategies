@@ -49,14 +49,19 @@
   .team-card { border: 1px solid var(--border); border-radius: 8px; overflow: hidden; transition: transform .2s, box-shadow .2s; }
   .team-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(29,29,29,0.1); }
   .team-photo {
-    height: 260px; background: var(--black);
+    height: 300px; background: var(--black);
     display: flex; align-items: center; justify-content: center;
     position: relative; overflow: hidden;
+  }
+  .team-photo img {
+    width: 100%; height: 100%; object-fit: cover; object-position: center top;
+    display: block;
   }
   .team-photo::before {
     content: ''; position: absolute; inset: 0;
     background: linear-gradient(145deg, var(--bordeaux-dk), var(--black));
   }
+  .team-photo.has-photo::before { display: none; }
   .team-initials {
     position: relative; z-index: 1;
     font-family: 'Syne', sans-serif; font-size: 48px; font-weight: 800;
@@ -124,10 +129,10 @@
     </div>
     <div class="story-copy">
       <div class="section-eyebrow">Our Story</div>
-      <h2 class="section-title" style="margin-bottom:28px;">Why we built Practicis.</h2>
-      <p>Practicis Strategies was founded with one conviction: that good consulting should leave organizations stronger — not just with a report, but with a real shift in how they think, decide, and act.</p>
-      <p>We saw too many engagements that produced polished decks and little else. So we built a different kind of firm — one that combines strategic rigor with genuine accountability for outcomes.</p>
-      <p>Today, we partner with founders, executives, and growing teams across industries to deliver the clarity and direction they need to perform at their best — whether that means developing a 3-year strategy, redesigning how a team operates, or orchestrating a high-stakes event that brings the right people together.</p>
+      <h2 class="section-title" style="margin-bottom:28px;">15+ years in the startup trenches.</h2>
+      <p>Practicis Strategies was built from the inside out. After 15+ years working in different roles across the startup scene, founder Chantale Streeting saw the same pattern repeat: brilliant founders stuck in the day-to-day, unable to focus on what actually moves the needle.</p>
+      <p>So she built the team she always wished founders had access to — a right-hand that embeds into your organization, builds genuine trust with you and your teams, and gets to work on the systems, workflows, and strategy that let you lead instead of manage.</p>
+      <p>When you work with Practicis, you get a team with a high level of empathy, a sixth sense for understanding an organization's vitals, and a relentless standard for clear expectations, clean data, amazing UX, and strong leadership.</p>
       <p style="color:var(--bordeaux);font-weight:500;font-size:14px;margin-top:8px;">Montréal-based. Canada-wide. Remote-ready.</p>
     </div>
   </div>
@@ -163,12 +168,14 @@
   <div class="team-grid">
 
     <div class="team-card">
-      <div class="team-photo"><div class="team-initials">PS</div></div>
+      <div class="team-photo has-photo">
+        <img src="img/chantale-streeting.jpg" alt="Chantale Streeting — Founder, Practicis Strategies">
+      </div>
       <div class="team-info">
-        <div class="team-name">[ Founder Name ]</div>
+        <div class="team-name">Chantale Streeting</div>
         <div class="team-title">Founder & Principal Consultant</div>
-        <p class="team-bio">With over 8 years of experience in management consulting and organizational strategy, [Name] founded Practicis Strategies to bring a more direct, results-focused approach to the field. She has led mandates across public, private, and non-profit sectors.</p>
-        <a href="#" class="team-linkedin">LinkedIn →</a>
+        <p class="team-bio">With 15+ years across the startup scene, Chantale founded Practicis to be the right-hand that founders actually need — one that embeds into your organization, earns your team's trust, and sets up the systems, workflows, and strategy that let you focus on leading.</p>
+        <a href="https://www.linkedin.com/in/chantalestreeting/" target="_blank" class="team-linkedin">LinkedIn →</a>
       </div>
     </div>
 
