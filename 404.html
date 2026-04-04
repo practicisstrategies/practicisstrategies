@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page Not Found — Practicis Strategies</title>
+<link rel="icon" type="image/x-icon" href="img/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="practicis.css">
+<style>
+  .error-page {
+    min-height: 100vh;
+    background: var(--black);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 64px 32px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Subtle background accent */
+  .error-page::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 4px;
+    background: var(--bordeaux);
+  }
+  .error-page::after {
+    content: '404';
+    position: absolute;
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(160px, 25vw, 320px);
+    font-weight: 800;
+    color: rgba(255,255,255,0.03);
+    letter-spacing: -8px;
+    line-height: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .error-content {
+    position: relative;
+    z-index: 1;
+    opacity: 0;
+    animation: heroFadeUp 0.7s 0.15s cubic-bezier(0.16,1,0.3,1) forwards;
+  }
+
+  .error-eyebrow {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--bordeaux);
+    font-weight: 500;
+    margin-bottom: 24px;
+  }
+
+  .error-heading {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(32px, 6vw, 72px);
+    font-weight: 800;
+    color: var(--white);
+    letter-spacing: -2.5px;
+    line-height: 1;
+    margin-bottom: 20px;
+  }
+
+  .error-sub {
+    font-size: 15px;
+    color: rgba(255,255,255,0.4);
+    line-height: 1.7;
+    font-weight: 300;
+    max-width: 400px;
+    margin: 0 auto 40px;
+  }
+
+  .error-actions {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .error-links {
+    margin-top: 56px;
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255,255,255,0.07);
+  }
+
+  .error-links a {
+    font-size: 12px;
+    color: rgba(255,255,255,0.35);
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    transition: color .2s;
+  }
+  .error-links a:hover { color: var(--white); }
+
+  @keyframes heroFadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: none; }
+  }
+
+  @media (max-width: 640px) {
+    .error-actions { flex-direction: column; align-items: stretch; }
+    .error-actions .btn-primary,
+    .error-actions .btn-outline-light { text-align: center; }
+    .error-links { gap: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a class="nav-logo" href="index.html">
+    <img src="img/apple-touch-icon.png" alt="Practicis Strategies">
+    <span class="nav-logo-text">Practicis Strategies</span>
+  </a>
+  <div class="nav-links">
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="work.html">Work</a>
+    <a href="contact.html" class="nav-cta">Let's talk</a>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-drawer" id="nav-drawer">
+  <a href="about.html">About</a>
+  <a href="services.html">Services</a>
+  <a href="work.html">Work</a>
+  <a href="contact.html" class="nav-cta">Let's talk</a>
+</div>
+
+<div class="error-page">
+  <div class="error-content">
+    <div class="error-eyebrow">Error 404</div>
+    <h1 class="error-heading">Page not found.</h1>
+    <p class="error-sub">The page you're looking for doesn't exist or may have been moved. Let's get you back on track.</p>
+    <div class="error-actions">
+      <a href="index.html" class="btn-primary">Back to home →</a>
+      <a href="contact.html" class="btn-outline-light">Contact us</a>
+    </div>
+    <div class="error-links">
+      <a href="about.html">About Us</a>
+      <a href="services.html">Services & Pricing</a>
+      <a href="work.html">Our Work</a>
+      <a href="contact.html">Get in Touch</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  const btn = document.getElementById('hamburger');
+  const drawer = document.getElementById('nav-drawer');
+  btn.addEventListener('click', () => { btn.classList.toggle('open'); drawer.classList.toggle('open'); document.body.style.overflow = drawer.classList.contains('open') ? 'hidden' : ''; });
+  drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { btn.classList.remove('open'); drawer.classList.remove('open'); document.body.style.overflow = ''; }));
+</script>
+</body>
+</html>
