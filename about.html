@@ -275,6 +275,17 @@
   document.querySelectorAll('.nav-links a, .nav-drawer a').forEach(a => {
     if (a.getAttribute('href') === page) a.classList.add('active');
   });
+
+  // Page transitions
+  document.querySelectorAll('a[href]').forEach(a => {
+    const href = a.getAttribute('href');
+    if (a.target === '_blank' || !href || href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto') || href.startsWith('tel')) return;
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      document.body.classList.add('is-leaving');
+      setTimeout(() => { window.location = href; }, 260);
+    });
+  });
 </script>
 </body>
 </html>

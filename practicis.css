@@ -331,6 +331,19 @@ a { text-decoration: none; color: inherit; }
 .form-group textarea { resize: vertical; min-height: 120px; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 
+/* ── PAGE TRANSITIONS ──────────────────────────────────── */
+body {
+  animation: pageFadeIn 0.35s ease both;
+}
+body.is-leaving {
+  animation: pageFadeOut 0.25s ease forwards;
+}
+@keyframes pageFadeIn  { from { opacity: 0; } to { opacity: 1; } }
+@keyframes pageFadeOut { from { opacity: 1; } to { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  body, body.is-leaving { animation: none; }
+}
+
 /* ── SCROLL ANIMATIONS ─────────────────────────────────── */
 [data-reveal] {
   opacity: 0;
