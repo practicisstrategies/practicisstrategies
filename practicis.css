@@ -55,6 +55,13 @@ a { text-decoration: none; color: inherit; }
 }
 .nav-links a:hover,
 .nav-links a.active { color: var(--white); }
+.nav-links a:not(.nav-cta).active {
+  text-decoration: underline;
+  text-decoration-color: var(--bordeaux);
+  text-underline-offset: 5px;
+  text-decoration-thickness: 2px;
+}
+.nav-drawer a.active { color: var(--white) !important; }
 .nav-cta {
   font-size: 12px !important; font-weight: 500 !important;
   background: var(--bordeaux); color: var(--white) !important;

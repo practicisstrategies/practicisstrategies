@@ -244,6 +244,12 @@
       if (res.ok) { form.style.display = 'none'; success.classList.add('show'); }
     } catch { form.style.display = 'none'; success.classList.add('show'); }
   });
+
+  // Active nav highlight
+  const page = location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav-links a, .nav-drawer a').forEach(a => {
+    if (a.getAttribute('href') === page) a.classList.add('active');
+  });
 </script>
 </body>
 </html>

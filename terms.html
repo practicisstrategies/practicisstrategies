@@ -159,6 +159,12 @@
   const drawer = document.getElementById('nav-drawer');
   btn.addEventListener('click', () => { btn.classList.toggle('open'); drawer.classList.toggle('open'); document.body.style.overflow = drawer.classList.contains('open') ? 'hidden' : ''; });
   drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { btn.classList.remove('open'); drawer.classList.remove('open'); document.body.style.overflow = ''; }));
+
+  // Active nav highlight
+  const page = location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav-links a, .nav-drawer a').forEach(a => {
+    if (a.getAttribute('href') === page) a.classList.add('active');
+  });
 </script>
 </body>
 </html>
